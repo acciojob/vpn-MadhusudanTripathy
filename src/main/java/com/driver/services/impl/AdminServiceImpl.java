@@ -26,7 +26,7 @@ public class AdminServiceImpl implements AdminService {
     public Admin register(String username, String password) {
         Admin admin = new Admin();
         admin.setUsername(username);
-        admin.setPasssword(password);
+        admin.setPassword(password);
         adminRepository1.save(admin);
         return admin;
     }
