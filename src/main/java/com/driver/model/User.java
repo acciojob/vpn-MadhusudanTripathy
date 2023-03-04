@@ -21,7 +21,7 @@ public class User {
         this.maskedIp = maskedIp;
     }
 
-    private boolean connected;
+    private Boolean connected;
 
     @ManyToMany
     @JoinTable(
@@ -40,7 +40,7 @@ public class User {
 
     }
 
-    public User(int id, String username, String password, String originalIp, boolean connected, List<ServiceProvider> serviceProviderList, List<Connection> connectionList, Country country,String maskedIp) {
+    public User(int id, String username, String password, String originalIp, Boolean connected, List<ServiceProvider> serviceProviderList, List<Connection> connectionList, Country country,String maskedIp) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -84,7 +84,7 @@ public class User {
         this.originalIp = originalIp;
     }
 
-    public boolean getConnected() {
+    public Boolean getConnected() {
         return connected;
     }
 
