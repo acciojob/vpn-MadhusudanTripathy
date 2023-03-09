@@ -105,7 +105,7 @@ public class ConnectionServiceImpl implements ConnectionService {
         if (receiver.getOriginalCountry().equals(sender.getOriginalCountry())) return sender;
         String countryName = receiver.getOriginalCountry().getCountryName().toString();
         sender = connect(senderId, countryName);
-        if (!sender.getConnected()) throw new Exception("Cannot establish communication");
+        if (!sender.getConnected()) throw new Exception("Unable to connect");
         return sender;
     }
 }
