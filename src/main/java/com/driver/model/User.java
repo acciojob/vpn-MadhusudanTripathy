@@ -24,10 +24,7 @@ public class User {
     private Boolean connected;
 
     @ManyToMany
-    @JoinTable(
-            name = "user_service_provider",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "service_provider_id"))
+    @JoinColumn
     List<ServiceProvider> serviceProviderList;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
