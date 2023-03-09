@@ -28,8 +28,8 @@ public class UserServiceImpl implements UserService {
         String countryNameCaps = countryName.toUpperCase();
         if (!countryNameCaps.equals("IND") && !countryNameCaps.equals("USA") && !countryNameCaps.equals("AUS") && !countryNameCaps.equals("CHI") && !countryNameCaps.equals("JPN")) throw new Exception("Country not found");
         Country country = new Country();
-        country.setCountryName(CountryName.valueOf(countryName));
-        country.setCode(CountryName.valueOf(countryName).toCode());
+        country.setCountryName(CountryName.valueOf(countryNameCaps));
+        country.setCode(CountryName.valueOf(countryNameCaps).toCode());
 
         User user = new User();
         user.setUsername(username);
